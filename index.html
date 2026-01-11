@@ -1,1 +1,199 @@
-<!doctype html><html><head><meta charset="utf8"><title>PTP Invest OÜ</title><style>body{background-color: rgb(10, 12, 16);}</style></head><body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PTP Invest - Family Office</title>
+    <style>
+        :root {
+            --color-bg: #ffffff;
+            --color-text: #1a1a1a;
+            --color-text-light: #666666;
+            --color-accent: #2c3e50;
+            --color-border: #e0e0d8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            line-height: 1.8;
+            letter-spacing: 0.3px;
+        }
+
+        main {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 150px 40px 80px 40px;
+            text-align: center;
+        }
+
+        .logo-section {
+            margin-bottom: 20px;
+        }
+
+        .logo-placeholder {
+            width: auto;
+            height: 180px;
+            margin: 0 auto 0;
+            background-color: transparent;
+            border-radius: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-bg);
+            font-size: 28px;
+            font-weight: 600;
+        }
+
+        .logo-placeholder img {
+            max-height: 180px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        h1 {
+            display: none;
+        }
+
+        .tagline {
+            display: none;
+        }
+
+        .divider {
+            width: 100%;
+            height: 1px;
+            background-color: rgba(44, 62, 80, 0.4);
+            margin: 20px auto;
+        }
+
+        .description {
+            font-size: 18px;
+            line-height: 2;
+            margin-bottom: 0;
+            margin-top: 0;
+            color: var(--color-text);
+        }
+
+        .description strong {
+            font-weight: 600;
+            color: var(--color-accent);
+        }
+
+        .description-bold {
+            font-size: 20px;
+            font-weight: 600;
+            margin-top: 40px;
+            margin-bottom: 60px;
+            color: var(--color-accent);
+            letter-spacing: 1px;
+        }
+
+        .footer {
+            border-top: 1px solid rgba(44, 62, 80, 0.4);
+            padding-top: 40px;
+            margin-top: 80px;
+            font-size: 14px;
+            color: var(--color-text-light);
+            letter-spacing: 0.5px;
+        }
+
+        .company-name {
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .locations {
+            margin-bottom: 12px;
+            letter-spacing: 1px;
+        }
+
+        .contact {
+            margin-bottom: 20px;
+        }
+
+        .contact a {
+            color: var(--color-accent);
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .contact a:hover {
+            opacity: 0.7;
+        }
+
+        .copyright {
+            margin-top: 20px;
+            font-size: 12px;
+            opacity: 0.7;
+        }
+
+        @media (max-width: 768px) {
+            main {
+                padding: 60px 30px;
+            }
+
+            h1 {
+                font-size: 36px;
+            }
+
+            .description {
+                font-size: 16px;
+                line-height: 1.9;
+            }
+
+            .description-bold {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section class="logo-section">
+            <div class="logo-placeholder">
+                <img src="/static/img/logo.jpg" alt="PTP Invest Logo">
+            </div>
+            <h1>PTP Invest</h1>
+            <p class="tagline">Markets shift, vision endures. Investing since 2021.</p>
+        </section>
+
+        <div class="divider"></div>
+
+        <section class="description">
+            <p>
+                <strong>Legacy isn't luck — it's crafted.</strong> At PTP Invest, we thrive where others hesitate.
+            </p>
+            <p>
+                Bold vision. Steady hands. Extraordinary results.
+            </p>
+        </section>
+
+        <footer class="footer">
+            <div class="locations">Tallinn · Barcelona</div>
+            <div class="contact">
+                <a href="mailto:info@ptpinvest.ee">info@ptpinvest.ee</a>
+            </div>
+	    <div class="copyright">© 2021 - <span id="current-year">2026</span> PTP Invest OÜ. All rights reserved.</div>
+        </footer>
+    </main>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var yearElem = document.getElementById("current-year");
+            if (yearElem) {
+                yearElem.textContent = "" + new Date().getUTCFullYear();
+            }
+        });
+    </script>
+</body>
+</html>
