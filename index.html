@@ -1,205 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PTP Invest - Family Office</title>
-    <style>
-        :root {
-            --color-bg: #ffffff;
-            --color-text: #1a1a1a;
-            --color-text-light: #666666;
-            --color-accent: #2c3e50;
-            --color-border: #e0e0d8;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PTP Invest — Family Office</title>
+<meta name="description" content="PTP Invest is a private family office. Markets shift, vision endures.">
+<meta name="theme-color" content="#FFFFFF">
+<meta property="og:title" content="PTP Invest — Family Office">
+<meta property="og:description" content="Markets shift, vision endures.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ptpinvest.ee">
+<meta property="og:image" content="https://ptpinvest.ee/static/img/logo.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://ptpinvest.ee">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23111114'/><text y='67' x='50' text-anchor='middle' font-family='Helvetica,Arial,sans-serif' font-size='46' font-weight='600' fill='%23fff'>P</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FFFFFF;
+  --ink:#111114;
+  --muted:#5A5A63;
+  --faint:#8E8E97;
+  --line:#DEDEDA;
+  --font:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica Neue',Arial,sans-serif;
+}
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
 
-        html {
-            scroll-behavior: smooth;
-        }
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:var(--font);
+  font-weight:400;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  min-height:100svh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:clamp(2.5rem,8vw,5rem) clamp(1.5rem,6vw,3rem);
+}
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
-            background-color: var(--color-bg);
-            color: var(--color-text);
-            line-height: 1.8;
-            letter-spacing: 0.01875rem;
-        }
+main{
+  width:100%;
+  max-width:46rem;
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
 
-        main {
-            max-width: 43.75rem;
-            margin: 0 auto;
-            padding: 9.375rem 2.5rem 5rem 2.5rem;
-            text-align: center;
-        }
+/* ── wordmark ───────────────────────────────── */
+.mark img{
+  width:clamp(14rem,38vw,24.5rem);
+  height:auto;
+  display:block;
+}
 
-        .logo-section {
-            margin-bottom: 1.25rem;
-        }
+/* ── statement ──────────────────────────────── */
+.statement{
+  margin-top:clamp(2.75rem,7vh,4rem);
+  max-width:38rem;
+  font-size:clamp(1.25rem,2.5vw,1.875rem);
+  font-weight:400;
+  line-height:1.55;
+  letter-spacing:-.011em;
+  text-wrap:balance;
+}
+.statement strong{font-weight:600}
 
-        .logo-placeholder {
-            width: auto;
-            height: 11.25rem;
-            margin: 0 auto 0;
-            background-color: transparent;
-            border-radius: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--color-bg);
-            font-size: 1.75rem;
-            font-weight: 600;
-        }
+/* ── divider ────────────────────────────────── */
+.divider{
+  width:3rem;
+  height:1px;
+  background:var(--line);
+  margin:clamp(2.25rem,5.5vh,3rem) 0;
+}
 
-        .logo-placeholder img {
-            max-height: 11.25rem;
-            max-width: 100%;
-            width: auto;
-            height: auto;
-            object-fit: contain;
-        }
+/* ── supporting line ────────────────────────── */
+.support{
+  font-size:clamp(.6875rem,1.3vw,.8125rem);
+  font-weight:500;
+  line-height:1.85;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--muted);
+  max-width:32rem;
+  text-wrap:balance;
+}
 
-        h1 {
-            display: none;
-        }
+/* ── contact ────────────────────────────────── */
+.contact{
+  margin-top:clamp(2.5rem,6.5vh,3.5rem);
+  font-size:clamp(.9375rem,1.7vw,1.0625rem);
+  font-weight:500;
+}
+.contact a{
+  color:var(--ink);
+  text-decoration:none;
+  padding-bottom:.35rem;
+  border-bottom:1px solid var(--line);
+  transition:border-color .25s ease;
+}
+.contact a:hover{border-bottom-color:var(--ink)}
+.contact a:focus-visible{outline:1px solid var(--ink);outline-offset:.45rem;border-radius:2px}
 
-        .tagline {
-            display: none;
-        }
+/* ── footer ─────────────────────────────────── */
+.meta{
+  margin-top:clamp(3.25rem,9vh,5rem);
+  display:flex;
+  flex-direction:column;
+  gap:.5rem;
+  font-size:.6875rem;
+  font-weight:400;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--faint);
+}
+.meta .places{color:var(--muted);font-weight:500}
 
-        .divider {
-            width: 100%;
-            height: 0.0625rem;
-            background-color: rgba(44, 62, 80, 0.4);
-            margin: 1.25rem auto;
-        }
+/* ── motion ─────────────────────────────────── */
+.reveal{opacity:0;animation:fade .7s ease forwards}
+.d1{animation-delay:.05s}
+.d2{animation-delay:.18s}
+.d3{animation-delay:.28s}
+.d4{animation-delay:.38s}
+.d5{animation-delay:.48s}
+@keyframes fade{to{opacity:1}}
 
-        .description {
-            font-size: 1.125rem;
-            line-height: 2;
-            margin-bottom: 0;
-            margin-top: 0;
-            color: var(--color-text);
-        }
-
-        .description strong {
-            font-weight: 600;
-            color: var(--color-accent);
-        }
-
-        .description-bold {
-            font-size: 1.25rem;
-            font-weight: 600;
-            margin-top: 2.5rem;
-            margin-bottom: 3.75rem;
-            color: var(--color-accent);
-            letter-spacing: 0.0625rem;
-        }
-
-        .footer {
-            border-top: 0.0625rem solid rgba(44, 62, 80, 0.4);
-            padding-top: 2.5rem;
-            margin-top: 5rem;
-            font-size: 0.875rem;
-            color: var(--color-text-light);
-            letter-spacing: 0.03125rem;
-        }
-
-        .company-name {
-            font-weight: 600;
-            margin-bottom: 0.75rem;
-        }
-
-        .locations {
-            margin-bottom: 0.75rem;
-            letter-spacing: 0.0625rem;
-        }
-
-        .contact {
-            margin-bottom: 1.25rem;
-        }
-
-        .contact a {
-            color: var(--color-accent);
-            text-decoration: none;
-            transition: opacity 0.3s ease;
-        }
-
-        .contact a:hover {
-            opacity: 0.7;
-        }
-
-        .copyright {
-            margin-top: 1.25rem;
-            font-size: 0.75rem;
-            opacity: 0.7;
-        }
-
-        @media (max-width: 48rem) {
-            main {
-                padding: 3.75rem 1.875rem;
-            }
-
-            h1 {
-                font-size: 2.25rem;
-            }
-
-            .logo-placeholder img {
-                max-height: 8.75rem;
-            }
-
-            .description {
-                font-size: 1rem;
-                line-height: 1.9;
-            }
-
-            .description-bold {
-                font-size: 1.125rem;
-            }
-        }
-    </style>
+@media (prefers-reduced-motion:reduce){
+  *{animation-duration:.01ms!important;transition:none!important}
+  .reveal{opacity:1}
+}
+</style>
 </head>
 <body>
-    <main>
-        <section class="logo-section">
-            <div class="logo-placeholder">
-                <img src="/static/img/logo.jpg" alt="PTP Invest Logo">
-            </div>
-            <h1>PTP Invest</h1>
-            <p class="tagline">Markets shift, vision endures. Investing since 2021.</p>
-        </section>
 
-        <div class="divider"></div>
+<main>
+  <div class="mark reveal d1">
+    <img src="/static/img/logo.png"
+         srcset="/static/img/logo.png 1x, /static/img/logo@2x.png 2x"
+         width="858" height="120"
+         alt="PTP Invest — markets shift, vision endures.">
+  </div>
 
-        <section class="description">
-            <p>
-                <strong>Legacy isn't luck — it's crafted.</strong> At PTP Invest, we thrive where others hesitate.
-            </p>
-            <p>
-                Bold vision. Steady hands. Extraordinary results.
-            </p>
-        </section>
+  <h1 class="statement reveal d2">
+    <strong>Legacy isn't luck — it's crafted.</strong> At PTP Invest, we thrive where others hesitate.
+  </h1>
 
-        <footer class="footer">
-            <div class="locations">Tallinn · Barcelona</div>
-            <div class="contact">
-                <a href="mailto:info@ptpinvest.ee">info@ptpinvest.ee</a>
-            </div>
-	    <div class="copyright">© 2021 - <span id="current-year">2026</span> PTP Invest OÜ. All rights reserved.</div>
-        </footer>
-    </main>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            var yearElem = document.getElementById("current-year");
-            if (yearElem) {
-                yearElem.textContent = "" + new Date().getUTCFullYear();
-            }
-        });
-    </script>
+  <div class="divider reveal d3" aria-hidden="true"></div>
+
+  <p class="support reveal d3">Bold vision. Steady hands. Extraordinary results.</p>
+
+  <div class="contact reveal d4">
+    <a href="mailto:info@ptpinvest.ee">info@ptpinvest.ee</a>
+  </div>
+
+  <div class="meta reveal d5">
+    <div class="places">Tallinn · Barcelona</div>
+    <div>© 2021–<span id="current-year">2026</span> PTP Invest OÜ</div>
+  </div>
+</main>
+
+<script>
+document.getElementById('current-year').textContent = new Date().getUTCFullYear();
+</script>
+
 </body>
 </html>
